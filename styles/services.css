@@ -675,7 +675,7 @@ section
 }
 .home_title span
 {
-	color: #20d34a;
+	color: #FFFFFF;
 }
 .breadcrumbs
 {
@@ -731,6 +731,9 @@ section
 	padding-bottom: 20px;
 	height: 580px;
 }
+.service_last {
+	height: auto;
+}
 .service:hover
 {
 	background: #00664E;
@@ -764,6 +767,9 @@ section
 	height: 61px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.service_icon .fa, .fas {
+	color: #232323;
 }
 .service_icon svg
 {
@@ -832,11 +838,11 @@ section
 	background: #20d34a;
 	content: '';
 }
-.service:hover .service_title
+.service:hover .service_title, .service:hover .fa, .service:hover .fas
 {
 	color: #FFFFFF;
 }
-.service:hover .service_text p
+.service:hover .service_text p, .service:hover .service_text ul
 {
 	color: rgba(255,255,255,0.65);
 }
