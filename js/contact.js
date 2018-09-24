@@ -8,6 +8,7 @@
 2. Set Header
 3. Init Menu
 4. Init Google Map
+5. Contact form
 
 
 ******************************/
@@ -16,7 +17,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -43,7 +44,7 @@ $(document).ready(function()
 	initMenu();
 	initGoogleMap();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -61,7 +62,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -80,7 +81,7 @@ $(document).ready(function()
 				if(!menuActive)
 				{
 					openMenu();
-					
+
 					$(document).one('click', function cls(e)
 					{
 						if($(e.target).hasClass('menu_mm'))
@@ -118,7 +119,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	4. Init Google Map
 
@@ -127,7 +128,7 @@ $(document).ready(function()
 	function initGoogleMap()
 	{
 		var myLatlng = new google.maps.LatLng(34.043238,-118.258338);
-    	var mapOptions = 
+    	var mapOptions =
     	{
     		center: myLatlng,
 	       	zoom: 13,
@@ -262,7 +263,7 @@ $(document).ready(function()
 				map.panBy(75, 0);
 				if($(window).width() < 720)
 		    	{
-		    		
+
 		    	}
 		    	else
 		    	{
@@ -271,5 +272,51 @@ $(document).ready(function()
 			}, 1400);
 		});
 	}
+
+	$(function () {
+
+    // init the validator
+    // validator files are included in the download package
+    // otherwise download from http://1000hz.github.io/bootstrap-validator
+
+    $('#contact_form').validator();
+
+
+    // when the form is submitted
+    $('#contact_form').on('submit', function (e) {
+
+        // if the validator does not prevent form submit
+        if (!e.isDefaultPrevented()) {
+            var url = "contact.php";
+
+            // POST values in the background the the script URL
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    // data = JSON object that contact.php returns
+
+                    // we recieve the type of the message: success x danger and apply it to the
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    // let's compose Bootstrap alert box HTML
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+
+                    // If we have messageAlert and messageText
+                    if (messageAlert && messageText) {
+                        // inject the alert to .messages div in our form
+                        $('#contact_form').find('.messages').html(alertBox);
+                        // empty the form
+                        $('#contact_form')[0].reset();
+                    }
+                }
+            });
+            return false;
+        }
+    })
+});
 
 });
