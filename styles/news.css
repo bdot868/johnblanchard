@@ -13,7 +13,7 @@
 	3.3 Logo
 4. Menu
 5. Home
-6. News
+6. Vehicles
 7. Sidebar
 8. Footer
 
@@ -647,8 +647,9 @@ section
 
 .home
 {
+	background: url('../images/stock-bus.jpg');
 	width: 100%;
-	height: 473px;
+	height: 573px;
 }
 .home_background
 {
@@ -700,7 +701,7 @@ section
 	color: #FFFFFF;
 }
 /**********************************
-6.vehicles
+6.Vehicles
 ***********************************/
 .vehicles {
 	margin-top: 40px;
