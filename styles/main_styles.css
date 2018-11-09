@@ -372,7 +372,7 @@ section
 	height: 80px;
 }
 .header.scrolled .header_content img {
-	width: 103px;
+	width: 7% !important;
 }
 .main_nav {
 	margin-right: 20px;
