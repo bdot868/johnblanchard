@@ -650,7 +650,10 @@ section
 .home
 {
 	width: 100%;
-	height: 573px;
+	height: 673px;
+	background: url("../images/Rose-Bowl.jpg");
+	background-size: cover;
+	background-position: center;
 }
 .home_background
 {
@@ -763,6 +766,7 @@ ACCORDIAN
 	color: #fff;
 	cursor: pointer;
 }
+
 
 /*********************************
 8. Team
