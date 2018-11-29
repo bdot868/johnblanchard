@@ -272,7 +272,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 500;
-	color: #232323;
+	color: #20d34a;
 }
 .section_title::before
 {
@@ -288,6 +288,9 @@ section
 .section_title_light h2
 {
 	color: #FFFFFF;
+}
+.about_content .about_text p {
+	color: #20d34a;
 }
 
 /*********************************
@@ -696,7 +699,7 @@ section
 }
 .home_content_inner
 {
-	width: 550px;
+	width: 630px;
 }
 .home_title h1
 {
