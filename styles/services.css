@@ -650,7 +650,9 @@ section
 .home
 {
 	width: 100%;
-	height: 573px;
+	height: 600px;
+	background: url("../images/Services-provided.jpg");
+	background-size: cover;
 }
 .home_background
 {
@@ -671,11 +673,11 @@ section
 {
 	font-size: 30px;
 	font-weight: 900;
-	color: #FFFFFF;
+	color: #000;
 }
 .home_title span
 {
-	color: #FFFFFF;
+	color: #000;
 }
 .breadcrumbs
 {
