@@ -221,7 +221,7 @@ section
 	height: 51px;
 	background: #00664E;
 }
-.button::after
+/* .button::after
 {
 	display: block;
 	position: absolute;
@@ -237,7 +237,7 @@ section
 	-ms-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
 	-o-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
 	transition: all 400ms cubic-bezier(.33,.68,.59,.99);
-}
+} */
 .button a
 {
 	display: block;
@@ -852,6 +852,9 @@ section
 	letter-spacing: 0.05em;
 	cursor: pointer;
 	margin-top: -8px;
+}
+.contact_button:hover {
+	background: #000;
 }
 .map_row
 {
